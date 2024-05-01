@@ -12,5 +12,9 @@ pypdf
 chromadb
 faiss-cpu
 langchain_experimental
-
+langchain-community
 streamlit_chat
+
+groq
+beautifulsoup4
+langchain-groq
