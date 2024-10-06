@@ -8,7 +8,7 @@ from get_embedding_function import get_embedding_function
 CHROMA_PATH = "chroma"
 
 PROMPT_TEMPLATE = """
-Answer the question based only on the following context:
+Answer the question based only on the following context only:
 
 {context}
 
@@ -45,8 +45,8 @@ def query_rag(query_text: str):
 
     sources = [doc.metadata.get("id", None) for doc, _score in results]
     formatted_response = f"Response: {response_text}\nSources: {sources}"
-    print(formatted_response)
-    return response_text
+    print('query response - '+formatted_response)
+    return formatted_response
 
 
 if __name__ == "__main__":
